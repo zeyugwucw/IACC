@@ -1,0 +1,15 @@
+im_raw = imread('data\01725u.jpg');
+im_raw = im2double(im_raw);
+%imshow(im_raw);
+[raw_height width] = size(im_raw);
+height = floor(raw_height/3);
+B = im_raw(1:height,:);
+G = im_raw(height+1:height*2, :);
+R = im_raw(height*2+1:height*3, :);
+new_im = cat(3,R,G,B);
+figure,imshow(new_im);
+ref = R;
+aG = align(G, ref, 'ssd',4);
+aB = align(B, ref, 'ssd',4);
+aligned_im = cat(3,ref,aG,aB);
+figure,imshow(aligned_im);
