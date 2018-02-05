@@ -24,4 +24,11 @@ I using the histogram to increase contrast. Re-distribute the value of every pix
 
 ## Edge Detection
 With the calculating of loss on color. The better idea is calculate them on a higher semantic levels. The first this comes out is edge. With the using of edge detection, the performance increased a lot. In this project, I use Laplace of Gaussian to find the edges in the three color images. Then calculate the loss on the edge map to get the alignment. 
+
+## Scaling During Alignment
+The three images may have different scale. Therefore an scaling alignment can be added. But the scaling is not that obvious. The improvement is not that apparent.
+
+## Some Other tries
 I also tried to use Harris to find corners on the image. But there are too few overlaps to do the alignment. However there still could have some possibility to do with higher semantic levels like corners.
+Another one was using the distribution of reference image histogram to adjust other two. But the they have mostly same distribute. The improvement was not that outstanding.
+
