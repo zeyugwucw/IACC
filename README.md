@@ -16,7 +16,7 @@ Some images have some rotation at very beginning. I tried to use Hough Transform
 ## Crop
 To archive auto crop, I tried to using variance of every row and column to find border. Because the edge has single color in most time. However, for some image especially with the rotations there always have the black-white lines which could cause large variance. An alternative way is delete outlier points and ignore them.
 
-![crop](/demo/crop.jpg)
+![crop](/demo/croped.jpg)
 
 ## Contrast
 I using the histogram to increase contrast. Re-distribute the value of every pixels to make them more uniform. This equalizer is implemented by myself instead of using a build-in function.
