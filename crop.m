@@ -1,7 +1,7 @@
 function new_im = crop(im)
- im_gau = imgaussfilt(im,1);
+ im_gau = imgaussfilt(im,3);
  [w h] = size(im);
- threshold = 0.2;
+ threshold = 0.05;
  col_r = var(im_gau(:,:,1), 0, 1);
  col_g = var(im_gau(:,:,2), 0, 1);
  col_b = var(im_gau(:,:,3), 0, 1);
@@ -17,10 +17,9 @@ function new_im = crop(im)
  col_threshold = sort_col(round(w*threshold));
  row_high_idx = find(row>row_threshold);
  col_high_idx = find(col>col_threshold);
- row_min = min(row_high_idx)
- row_max = max(row_high_idx)
- col_min = min(col_high_idx)
- col_max = max(col_high_idx)
- imshow(im(row_min:row_max, col_min:col_max,:));
-
+ row_min = min(row_high_idx);
+ row_max = max(row_high_idx);
+ col_min = min(col_high_idx);
+ col_max = max(col_high_idx);
+ new_im = im(row_min:row_max, col_min:col_max,:);
 end

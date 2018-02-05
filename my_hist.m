@@ -8,7 +8,7 @@ for i = 1:l
     end
 end
 
-figure, bar(n,v,1);
+% figure, bar(n,v,1);
 
 end
 
