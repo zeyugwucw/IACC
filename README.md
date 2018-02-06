@@ -23,7 +23,7 @@ Instead of using var to measure the change in each column/row, I tried to use di
 ![crop_diff](/demo/crop_diff.jpg)
 
 ## Contrast
-I using the histogram to increase contrast. Re-distribute the value of every pixels to make them more uniform. This equalizer is implemented by myself instead of using a build-in function.
+I using the histogram equalizer to increase contrast. Re-distribute the value of every pixels to make them more uniform. (Result may vary from build-in histeq.)
 ![eq](/demo/eq.jpg)
 
 ## Edge Detection
